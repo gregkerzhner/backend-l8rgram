@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'auth'
+  get '/auth/:provider/callback' => 'v1/sessions#from_oauth'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -37,12 +37,21 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
+    aws-sdk (1.60.1)
+      aws-sdk-v1 (= 1.60.1)
+    aws-sdk-v1 (1.60.1)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.5)
+      climate_control (>= 0.0.3, < 1.0)
     columnize (0.9.0)
     debug_inspector (0.0.2)
     devise (3.5.1)
@@ -95,6 +104,11 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
+    paperclip (4.2.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     pg (0.17.1)
     rack (1.6.1)
     rack-test (0.6.3)
@@ -154,12 +168,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk (~> 1.6)
   byebug
   devise
   devise_token_auth
   jbuilder (~> 2.0)
   omniauth
   omniauth-instagram
+  paperclip
   pg
   rails (= 4.2.0)
   sdoc (~> 0.4.0)
